@@ -20,6 +20,18 @@ const { title, description } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://anibalcoder.vercel.app/" />
+		<meta property="og:site_name" content="Portafolio de Aníbal (anibalcoder)" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="https://anibalcoder.vercel.app/portfolio.webp" />
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="https://anibalcoder.vercel.app/portfolio.webp" />
 	</head>
 	<body class="font-poppins bg-neutral-900 text-white min-h-screen my-4">
 		<Header />
