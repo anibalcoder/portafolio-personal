@@ -1,0 +1,34 @@
+---
+import type { JSX } from 'astro/jsx-runtime'
+
+interface Tags {
+  name: string,
+  icon: JSX.Element
+}
+
+interface Props {
+  title: string,
+  tags: Tags[],
+}
+
+const { title, tags } = Astro.props
+---
+
+<article class="bg-card-dark border border-white/10 p-4 sm:p-6 rounded-2xl">
+  <h3 class="text-[#8B949E] text-2xl font-semibold text-center mb-9">
+    {title}
+  </h3>
+
+  <ul class="grid grid-cols-3 place-content-center gap-9">
+    {
+      tags.map(({ name, icon:Icon }) => (
+        <li class="flex flex-col justify-center items-center gap-2">
+          <Icon class="size-8"/>
+          <span class="text-cyan-300 text-sm font-medium">
+            {name}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</article>

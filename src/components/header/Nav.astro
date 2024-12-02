@@ -1,0 +1,51 @@
+---
+const NAV_ITEM = [
+  {
+    title: 'Proyectos',
+    label: 'proyectos',
+    url: './#proyectos'
+  },
+  {
+    title: 'Sobre mí',
+    label: 'sobre mí',
+    url: './#sobre-mi'
+  },
+  {
+    title: 'Habilidades',
+    label: 'habilidades',
+    url: './#habilidades'
+  },
+]
+---
+
+<nav class="rounded-full">
+  <ul class='flex flex-wrap justify-center items-center gap-y-3 text-sm font-medium px-3 py-[6px]'>
+    {
+      NAV_ITEM.map(({ title, label, url }) => (
+        <li>
+          <a
+            class="hover:text-yellow-300 transition-colors p-2"
+            href={url}
+            aria-label={label}
+          >
+            {title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  nav {
+    animation: nav-bg 1000ms linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-bg {
+    to {
+      background-color: hsl(163, 88%, 20%);
+    }
+  }
+</style>

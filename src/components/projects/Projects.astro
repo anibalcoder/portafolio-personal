@@ -1,0 +1,49 @@
+---
+import SectionContainer from '../SectionContainer.astro'
+import Project from './Project.astro'
+
+const PROJECTS = [
+  {
+    title: 'Cinepedia',
+    description: 'App con la <span class="text-yellow-200">API de The Movie DB</span> para mostrar películas y gestionar favoritas en <span class="text-yellow-200">localStorage</span>.',
+    label: 'Ir al sitio web cinepedia',
+    link: 'https://cinepedias.vercel.app/',
+    image: '/projects/cinepedia.webp',
+    tags: ['JavaScript', 'Handlebars', 'Vite', 'CSS'],
+  },
+  {
+    title: 'Tres en raya',
+    description: 'Juego de Tic Tac Toe con <span class="text-yellow-200">manejo de estado, indicador de turno</span> y localStorage.',
+    label: 'Ir al sitio web tres en raya',
+    link: 'https://tres-en-rayas.vercel.app/',
+    image: '/projects/tres-en-raya.webp',
+    tags: ['Tailwind CSS', 'Vite', 'StandardJS', 'React'],
+  },
+  {
+    title: 'Lista de lectura',
+    description: '<span class="text-yellow-200">Organiza y gestiona tus lecturas con hooks</span> para registrar y manejar tus libros favoritos.',
+    label: 'Ir al sitio web lecturas',
+    link: 'https://lista-de-lecturas.netlify.app/',
+    image: '/projects/lista-de-lectura.webp',
+    tags: ['Tailwind CSS', 'PNPM', 'Vitest', 'React'],
+  },
+]
+---
+
+<SectionContainer id='proyectos'>
+  <h2 class="text-xl font-bold">Proyectos</h2>
+
+  <p class="text-white/80 py-6">
+    Cada proyecto refleja mi esfuerzo, aprendizaje y ganas de crecer. Estoy emocionado de compartirlos contigo y mostrar el resultado de mi trabajo.
+  </p>
+
+  <ul class="grid grid-cols-auto-fit/354px justify-center gap-12">
+    {
+      PROJECTS.map(project => (
+        <li>
+          <Project {...project} />
+        </li>
+      ))
+    }
+  </ul>
+</SectionContainer>

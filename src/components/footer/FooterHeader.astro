@@ -1,0 +1,52 @@
+---
+import HomeIcon from "../icons/Home.astro"
+import LinkedInIcon from "../icons/contact/LinkedIn.astro"
+import GitHubIcon from "../icons/contact/GitHub.astro"
+
+const SOCIAL_NETWORKS = [
+  {
+    link: 'https://www.linkedin.com/in/anibalcoder/',
+    title: 'LikedIn/anibalcoder',
+    icon: LinkedInIcon,
+  },
+  {
+    link: 'https://github.com/anibalcoder/',
+    title: 'GitHub/anibalcoder',
+    icon: GitHubIcon,
+  },
+]
+---
+
+<header class="flex justify-between items-center p-2 border border-white/10 rounded-lg">
+  <a
+    class="flex items-start gap-x-2 p-2 hover:text-yellow-300"
+    href="/#hero"
+  >
+    <HomeIcon class="size-4" />
+    <span class="text-sm font-medium">Aníbal</span>
+  </a>
+
+  <ul class="flex items-center">
+    {
+      SOCIAL_NETWORKS.map(({ link, title, icon:Icon }) => (
+        <li class="flex">
+          <a
+            class="inline-block p-2 social-network"
+            href={link}
+            title={title}
+            target="_blank"
+          >
+            <Icon class="size-7"/>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</header>
+
+<style>
+  .social-network:hover svg {
+    filter: drop-shadow(2px 2px 8px hsl(240, 61%, 54%));
+    transition: filter 300ms ease-in-out ;
+  }
+</style>

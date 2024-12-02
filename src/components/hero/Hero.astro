@@ -1,0 +1,24 @@
+---
+import Profile from './Profile.astro'
+import ArrowIcon from '../icons/Arrow.astro'
+---
+
+<section
+  id="hero" 
+  class="flex flex-col lg:flex-row justify-center items-center lg:items-end mx-4 pt-24 lg:pt-36 gap-x-24 gap-y-14"
+>
+  <Profile />
+
+  <div class="-order-1 lg:order-1">
+    <div class="ml-14 flex flex-col items-center">
+      <h1 class="text-xl font-bold">Hola, soy Aníbal</h1>
+      <ArrowIcon class="size-14 rotate-12"/>
+    </div>
+
+    <img
+      class="size-40 rounded-full"
+      src="./anibalcoder.webp"
+      alt="Aníbal"
+    >
+  </div>
+</section>

@@ -1,0 +1,22 @@
+---
+import BashIcon from "../icons/skills/Bash.astro"
+import JavaScriptIcon from '../icons/skills/JavaScript.astro'
+import FigmaIcon from '../icons/skills/Figma.astro'
+import PlaywrightIcon from '../icons/skills/Playwright.astro'
+---
+
+<div class="relative size-40 place-self-center my-10">
+  <BashIcon class="filter-shadow absolute -left-12 sm:-left-16 top-0 size-8 animate-move-top" />
+  <JavaScriptIcon class="filter-shadow absolute -right-12 sm:-right-16 top-10 size-8 rounded animate-move-bottom" />
+  <FigmaIcon class="filter-shadow absolute -left-12 sm:-left-16 top-1/2 size-8 animate-move-top" />
+  <PlaywrightIcon class="filter-shadow absolute -right-12 sm:-right-16 bottom-0 size-10 animate-move-bottom" />
+
+  <img class="rounded-lg" src="./anibalcoder.webp" alt="Aníbal" loading="lazy">
+</div>
+
+
+<style>
+  .filter-shadow {
+    filter: drop-shadow(2px 2px 8px hsl(240, 61%, 54%));
+  }
+</style>

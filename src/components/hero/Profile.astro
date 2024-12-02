@@ -1,0 +1,81 @@
+---
+import ContactLink from '../ContactLink.astro'
+import DownloadIcon from '../icons/contact/Download.astro'
+import EmailIcon from '../icons/contact/Email.astro'
+import LinkedInIcon from '../icons/contact/LinkedIn.astro'
+import GitHubIcon from '../icons/contact/GitHub.astro'
+
+const CONTACT_ITEM = [
+  {
+    title: 'Contáctame',
+    url: 'mailto:miduga@gmail.com',
+    icon: EmailIcon,
+  },
+  {
+    title: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/anibalcoder/',
+    icon: LinkedInIcon,
+  },
+  {
+    title: 'GitHub',
+    url: 'https://github.com/anibalcoder/',
+    icon: GitHubIcon,
+  },
+]
+---
+
+<div class="max-w-[480px]">
+  <div class="animated-border">
+    <a
+      class="text-sm font-medium inline-flex items-center gap-2 px-4 py-1 rounded-full bg-gray-800"
+      href="./CV_Aníbal_Desarrollador_Frontend.pdf"
+      download="CV_Aníbal_Desarrollador_Frontend.pdf"
+      target="_blank"
+    >
+      <DownloadIcon class="size-4"/> Descargar CV
+    </a>
+  </div>
+
+  <p class="text-white/80 text-balance py-5">
+    <span class="text-yellow-200 font-bold">Desarrollador Front-End</span> de Ica, Perú. Enfocado en crear aplicaciones atractivas y funcionales mientras amplío constantemente mis habilidades.
+  </p>
+
+  <ul class="flex flex-wrap items-center gap-4">
+    {
+      CONTACT_ITEM.map(({ title, url, icon:Icon }) => (
+        <li>
+          <ContactLink href={url} target="_blank">
+            <Icon class="size-4"/>
+            {title}
+          </ContactLink>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  .animated-border {
+    display: inline-block;
+    background-image: linear-gradient(
+      120deg, hsl(256, 78%, 73%) 25%, hsl(55, 99%, 61%) 50%, hsl(256, 78%, 73%) 75%
+    );
+    border-radius: 9999px;
+    padding: 1px;
+    animation: gradient 10s linear infinite;
+  }
+
+  @keyframes gradient {
+    from {
+      background-position: 0 0;
+    }
+
+    50% {
+      background-position: -480px 0;
+    }
+
+    to {
+      background-position: 0 0;
+    }
+  }
+</style>

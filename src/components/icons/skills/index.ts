@@ -1,0 +1,16 @@
+export { default as HTMLIcon } from './HTML.astro';
+export { default as CSSIcon } from './CSS.astro';
+export { default as JavaScriptIcon } from './JavaScript.astro';
+export { default as ReactIcon } from './React.astro';
+export { default as TailwindIcon } from './Tailwind.astro';
+export { default as ViteIcon } from './Vite.astro';
+export { default as BashIcon } from './Bash.astro';
+export { default as GitIcon } from './Git.astro';
+export { default as NPMIcon } from './NPM.astro';
+export { default as PNPMIcon } from './PNPM.astro';
+export { default as StandardIcon } from './Standard.astro';
+export { default as TypeScriptIcon } from './TypeScript.astro';
+export { default as VitestIcon } from './Vitest.astro';
+export { default as PlaywrightIcon } from './Playwright.astro';
+export { default as FigmaIcon } from './Figma.astro';
+export { default as AstroIcon } from './AstroIcon.astro';

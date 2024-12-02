@@ -1,0 +1,107 @@
+---
+import SectionContainer from '../SectionContainer.astro'
+import Skill from './Skill.astro'
+import * as Icons from '../icons/skills'
+
+const SKILLS = [
+  {
+    title: 'Frontend',
+    tags: [
+      {
+        name: 'HTML',
+        icon: Icons.HTMLIcon,
+      },
+      {
+        name: 'CSS',
+        icon: Icons.CSSIcon,
+      },
+      {
+        name: 'JavaScript',
+        icon: Icons.JavaScriptIcon,
+      },
+      {
+        name: 'React',
+        icon: Icons.ReactIcon,
+      },
+      {
+        name: 'TailwindCSS',
+        icon: Icons.TailwindIcon,
+      },
+      {
+        name: 'Vite',
+        icon: Icons.ViteIcon,
+      },
+      
+    ]
+  },
+  {
+    title: 'Herramientas',
+    tags: [
+      {
+        name: 'Bash',
+        icon: Icons.BashIcon,
+      },
+      {
+        name: 'Git',
+        icon: Icons.GitIcon,
+      },
+      {
+        name: 'NPM',
+        icon: Icons.NPMIcon,
+      },
+      {
+        name: 'PNPM',
+        icon: Icons.PNPMIcon,
+      },
+      {
+        name: 'StandardJS',
+        icon: Icons.StandardIcon,
+      },
+    ]
+  },
+  {
+    title: 'Aprendiendo',
+    tags: [
+      {
+        name: 'TypeScript',
+        icon: Icons.TypeScriptIcon,
+      },
+      {
+        name: 'Vitest',
+        icon: Icons.VitestIcon,
+      },
+      {
+        name: 'Playwright',
+        icon: Icons.PlaywrightIcon,
+      },
+      {
+        name: 'Figma',
+        icon: Icons.FigmaIcon,
+      },
+      {
+        name: 'Astro',
+        icon: Icons.AstroIcon,
+      },
+      
+    ]
+  },
+]
+---
+
+<SectionContainer id='habilidades'>
+  <h2 class="text-xl font-bold">Habilidades</h2>
+
+  <p class="text-white/80 py-6">
+    A lo largo de mi camino como desarrollador, he adquirido experiencia y habilidades clave que refuerzan mi crecimiento profesional.
+  </p>
+
+  <ul class="grid grid-cols-auto-fit/354px justify-center gap-12">
+    {
+      SKILLS.map(skill => (
+        <li>
+          <Skill {...skill}/>
+        </li>
+      ))
+    }
+  </ul>
+</SectionContainer>
