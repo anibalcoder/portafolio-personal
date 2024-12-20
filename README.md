@@ -4,7 +4,7 @@
 
 <div align="center">
   <a href="https://anibalcoder.vercel.app/">
-    <img src="./public/portfolio.webp" alt="Vista previa del portafolio">
+    <img src="./public/portfolio.png" alt="Vista previa del portafolio">
   </a>
 </div>
 
