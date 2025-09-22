@@ -1,0 +1,11 @@
+---
+import type { Technologies as TechnologiesType } from '../constants/technologies';
+
+const { title, color } = Astro.props as TechnologiesType
+---
+
+<span
+  class={`inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium ${ color }`}
+>
+  { title }
+</span>

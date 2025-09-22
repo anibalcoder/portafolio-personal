@@ -1,0 +1,41 @@
+---
+import SectionContainer from "../SectionContainer.astro";
+import type { Props as ExperienceItemProps } from "./ExperienceItem.astro";
+import ExperienceItem from "./ExperienceItem.astro";
+import { TECHNOLOGIES } from "../../constants/technologies";
+
+const EXPERIENCES: ExperienceItemProps[] = [
+  {
+    role: "Frontend Developer",
+    company: "EDteam",
+    startDate: "Abril",
+    endDate: "Jul 2025",
+    description:
+      "Durante mis prácticas en EDteam, líder en aprendizaje online, ayudé a mejorar el rendimiento de la plataforma optimizando el reproductor de videos, evitando solicitudes redundantes y solucionando bugs críticos como la carga infinita del reproductor.",
+    technologies: TECHNOLOGIES,
+  },
+  {
+    role: "Frontend Developer",
+    company: "EDteam",
+    startDate: "Abril",
+    endDate: "Jul 2025",
+    description:
+      "Durante mis prácticas en EDteam, líder en aprendizaje online, ayudé a mejorar el rendimiento de la plataforma optimizando el reproductor de videos, evitando solicitudes redundantes y solucionando bugs críticos como la carga infinita del reproductor.",
+    technologies: TECHNOLOGIES,
+  },
+];
+---
+
+<SectionContainer id="experiencia">
+  <h2 class="text-xl font-bold">Experiencia Laboral</h2>
+
+  <ol class="py-6 space-y-12">
+    {
+      EXPERIENCES.map(( experience ) => (
+        <li>
+          <ExperienceItem { ...experience } />
+        </li>
+      ))
+    }
+  </ol>
+</SectionContainer>
